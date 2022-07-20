@@ -1,5 +1,5 @@
 import { Card, Nation } from '../../types';
-import unrestBase from '../unrest';
+import unrestBase from '../../common/unrest';
 
 const unrest: Card = {
   ...unrestBase,

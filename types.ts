@@ -1,6 +1,6 @@
 export enum Icon {PINNED, ATTACK};
 export enum State {BARBARIAN, EMPIRE};
-export enum CardType{CITY,METROPOLIS, KNIGHT, MASK};
+export enum CardType{ CITY, METROPOLIS, SCROLL, MASK, KNIGHT };
 export enum RegionType { PRODUCTION, FERTILE, RIVER }; // https://boardgamegeek.com/thread/2775554/region-type
 export enum Suit {POWER, REGION, UNCIVILISED, CIVILISED, UNCIVILISED_CIVILISED, TRIBUTARY, FAME, UNREST};
 export enum Nation {CARTHAGINIANS, CELTS, GREEKS, MACEDONIANS, PERSIANS, ROMANS, SCYTHIANS, VIKINGS, ARTHURIANS, ATLANTEANS, EGYPTIANS, MAURYANS, MINOANS, OLMECS, QIN, UTOPIAN};
@@ -16,8 +16,9 @@ export type Card = {
   developmentCost?: Resources,
   suit?: Suit, 
   nation?: Nation,
-  cardNumber: string;
+  cardNumber?: `${1|2}${'CIV'|'FAM'|'REG'|'TRI'|'UNC'|'UNR'|'MAC'|'PER'|'ROM'}${number}${''|'A'|'B'}/${number}`,
   startingLocation?: StartingLocation,
+  playerCount?: 3 | 4,
   vp?: number | string,
 }
 
