@@ -16,7 +16,7 @@ export type Card = {
   developmentCost?: Resources,
   suit?: Suit, 
   nation?: Nation,
-  cardNumber?: `${1|2}${'CIV'|'FAM'|'REG'|'TRI'|'UNC'|'UNR'|'CAR'|'CEL'|'MAC'|'PER'|'ROM'|'SCY'|'VIK'}${number}${''|'A'|'B'}/${number}`,
+  cardNumber?: `${1|2}${'CIV'|'FAM'|'REG'|'TRI'|'UNC'|'UNR'|'CAR'|'CEL'|'GRE'|'MAC'|'PER'|'ROM'|'SCY'|'VIK'}${number}${''|'A'|'B'}/${number}`,
   startingLocation?: StartingLocation,
   playerCount?: 3 | 4,
   vp?: number | string,
