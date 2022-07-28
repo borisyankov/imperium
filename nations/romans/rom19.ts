@@ -1,5 +1,5 @@
 import { Card, Nation } from '../../types';
-import city from '../../common/uncivilised/unc15';
+import city from '../../common/city';
 
 const cityOfRome: Card = {
   ...city,

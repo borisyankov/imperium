@@ -1,8 +1,8 @@
 import { Card, StartingLocation, State } from '../../types';
-import unc15 from '../../common/uncivilised/unc15';
+import city from '../../common/city';
 
 const cityOfDubhLinn: Card = {
-  ...unc15,
+  ...city,
   cardName: 'City of Dubh Linn',
   state: State.BARBARIAN,
   cardNumber: '1VIK9/26',

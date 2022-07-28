@@ -1,10 +1,8 @@
-import { Card, Suit, Icon, CardType } from '../../types';
+import { Card, Suit } from '../../types';
+import cityBase from '../city';
 
 const city: Card = {
-  cardName: 'City',
-  icon: Icon.PINNED,
-  cardType: [CardType.CITY],
-  effect: 'Solstice: you MAY discard a card to choose: gain 1 {population} OR gain 1 {materials} OR draw a card.',
+  ...cityBase,
   suit: Suit.UNCIVILISED, 
   cardNumber: '1UNC15/22',
   vp: 1,

@@ -1,12 +1,11 @@
 import { Card, StartingLocation } from '../../types';
-import unc15 from '../../common/uncivilised/unc15';
+import city from '../../common/city';
 
 const cityOfAthens: Card = {
-  ...unc15,
+  ...city,
   cardName: 'City of Athens',
   cardNumber: '1GRE11/23',
   startingLocation: StartingLocation.NATION,
-  suit: undefined,
 };
 
 export default cityOfAthens;
