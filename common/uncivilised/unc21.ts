@@ -1,4 +1,4 @@
-import { Card, Suit, Icon, CardType } from '../../types';
+import { Card, Suit } from '../../types';
 
 const leadership: Card = {
   cardName: 'Diplomacy',

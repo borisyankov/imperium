@@ -1,4 +1,4 @@
-import { Card, Nation, RegionType, StartingLocation, Icon, Suit, State } from '../../types';
+import { Card, Nation, StartingLocation, Suit, State } from '../../types';
 
 const medianEmpire: Card = {
   cardName: 'Nisaean Plain',

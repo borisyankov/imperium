@@ -1,7 +1,6 @@
-import { MarketBoard, Resources, Suit } from './types';
-import * as commonCards from './common';
+import { MarketBoard, Resources } from './types';
 
-const board: MarketBoard = {
+export const board: MarketBoard = {
   commonDeck: [],
   commonRevealed1: [],
   tokensOnCommon1: {},
@@ -26,16 +25,18 @@ export const shuffle = <T>(deck: T[]) => {
   }
 };
 
-const playerSetup = () => {
+export const playerSetup = () => {
   // nation
   const initialResources: Resources = {
     materials: 3,
     population: 2,
     progress: 1,
   };
+  return initialResources;
 }
 
-const boardSetup = (board: MarketBoard) => {
+export const boardSetup = (board: MarketBoard) => {
   // filter out 3 player and 4 player cards
   // board.fameDeck = commonCards.filter(card => card.suit === Suit.FAME);
+  return board;
 }

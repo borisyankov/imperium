@@ -1,4 +1,4 @@
-import { Card, Icon, State, Suit } from '../../types';
+import { Card, Icon, Suit } from '../../types';
 
 const mauryans: Card = {
   cardName: 'Mauryans',

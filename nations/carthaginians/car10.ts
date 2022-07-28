@@ -1,4 +1,4 @@
-import { Card, Icon, Nation, StartingLocation, State } from '../../types';
+import { Card, Icon, Nation, StartingLocation } from '../../types';
 
 const caravans: Card = {
   cardName: 'Caravans',

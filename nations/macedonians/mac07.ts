@@ -1,4 +1,4 @@
-import { Card, Nation, StartingLocation, State, Icon } from '../../types';
+import { Card, Nation, StartingLocation, State } from '../../types';
 
 const mosaics: Card = {
   cardName: 'Mosaics',

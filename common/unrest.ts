@@ -1,4 +1,4 @@
-import { Card, State, Nation, StartingLocation } from '../types';
+import { Card } from '../types';
 
 const unrest: Card = {
   cardName: 'Unrest',
