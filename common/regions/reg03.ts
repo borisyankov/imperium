@@ -1,9 +1,10 @@
 import { Card, Icon, Suit } from '../../types';
+import * as E from '../../effects';
 
 const mountain: Card = {
   cardName: 'Mountain',
   icon: Icon.PINNED,
-  effect: 'Gain 3 {materials}. Exile a card from the market. You MAY garrison a card.',
+  effect: [E.GAIN_3_M, E.EXILE_FROM_MARKET, E.GARRISON],
   suit: Suit.REGION, 
   cardNumber: '1REG3/14',
   vp: 1,

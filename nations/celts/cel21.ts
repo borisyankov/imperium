@@ -1,10 +1,11 @@
 import { Card, Icon, Nation, RegionType, Suit } from '../../types';
+import * as E from '../../effects';
 
 const celtica: Card = {
   cardName: 'Celtica',
   icon: Icon.PINNED,
   regionType: [RegionType.PRODUCTION],
-  effect: 'You may place a card of your choice from your discard pile on the top of your deck. You MAY garrison a card.',
+  effect: [E.FROM_DISCARD_TO_DECK, E.GARRISON],
   suit: Suit.REGION,
   nation: Nation.CELTS,
   cardNumber: '1CEL21/28',

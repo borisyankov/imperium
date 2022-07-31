@@ -1,10 +1,11 @@
 import { Card, Nation, RegionType, StartingLocation, Icon, Suit } from '../../types';
+import * as E from '../../effects';
 
 const arachosia: Card = {
   cardName: 'Arachosia',
   icon: Icon.PINNED,
   regionType: [RegionType.PRODUCTION, RegionType.RIVER],
-  effect: 'You MAY put a card from your discard pile into your history. You MAY garrison a card.',
+  effect: [E.DISCARD_TO_HISTORY, E.GARRISON],
   nation: Nation.PERSIANS,
   cardNumber: '1PER10/23',
   startingLocation: StartingLocation.NATION,

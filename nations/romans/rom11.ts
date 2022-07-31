@@ -1,10 +1,11 @@
 import { Card, Nation, StartingLocation, Icon, RegionType, Suit } from '../../types';
+import * as E from '../../effects';
 
 const galliaAquitania: Card = {
   cardName: 'Gallia Aquitania',
   icon: Icon.PINNED,
   regionType: [RegionType.PRODUCTION, RegionType.FERTILE],
-  effect: 'You MAY garrison a card.',
+  effect: E.GARRISON,
   suit: Suit.REGION,
   nation: Nation.ROMANS,
   cardNumber: '1ROM11/23',

@@ -1,10 +1,11 @@
 import { Card, Icon, Nation, State, Suit } from '../../types';
+import * as E from '../../effects';
 
 const tianShan: Card = {
   cardName: 'Tian Shan',
   icon: Icon.PINNED,
   state: State.BARBARIAN,
-  effect: 'Gain 1 {population}. You MAY garrison a card.',
+  effect: [E.GAIN_1_P, E.GARRISON],
   suit: Suit.REGION,
   nation: Nation.SCYTHIANS,
   cardNumber: '1SCY19/24',

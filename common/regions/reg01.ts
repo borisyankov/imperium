@@ -1,9 +1,10 @@
 import { Card, Icon, Suit } from '../../types';
+import * as E from '../../effects';
 
 const wilderness: Card = {
   cardName: 'Wilderness',
   icon: Icon.PINNED,
-  effect: 'Exile a card from the Market. You MAY garrison a card. Passive: you MAY recall this card to avoid hte effect of an {attack}.',
+  effect: [E.EXILE_FROM_MARKET, E.GARRISON, 'Passive: you MAY recall this card to avoid the effect of an {attack}.'],
   suit: Suit.REGION,
   playerCount: 3,
   cardNumber: '1REG1/14',

@@ -1,10 +1,11 @@
 import { Card,  Icon, RegionType, Suit } from '../../types';
+import * as E from '../../effects';
 
 const river: Card = {
   cardName: 'River',
   icon: Icon.PINNED,
   regionType: [RegionType.PRODUCTION, RegionType.PRODUCTION, RegionType.RIVER],
-  effect: 'You MAY put a card from your discard pile into your history. Exile a card from the market. You MAY garrison a card.',
+  effect: [E.DISCARD_TO_HISTORY, E.EXILE_FROM_MARKET, E.GARRISON],
   suit: Suit.REGION, 
   cardNumber: '1REG11/14',
 }

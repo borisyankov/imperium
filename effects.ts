@@ -1,0 +1,12 @@
+export const GARRISON = 'You MAY garrison a card.';
+export const EXILE_FROM_MARKET = 'Exile a card from the market.';
+export const GAIN_1_P = 'Gain 1 {population}.';
+export const GAIN_1_M = 'Gain 1 {materials}.';
+export const GAIN_2_M = 'Gain 2 {materials}.';
+export const GAIN_3_M = 'Gain 3 {materials}.';
+export const DRAW = 'Draw a card.';
+export const MAY_DRAW = 'You MAY draw a card.';
+export const DISCARD_TO_HISTORY = 'You MAY put a card from your discard pile into your history.';
+export const MAY_DRAW_DISCARD = 'You MAY draw a card from your discard pile.';
+export const EACH_ABANDON_REGION = 'Each other player abandons a {region}.';
+export const FROM_DISCARD_TO_DECK = 'You may place a card of your choice from your discard pile on the top of your deck.';

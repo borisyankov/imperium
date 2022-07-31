@@ -12,7 +12,7 @@ export type Card = {
   state?: State,
   cardType?: CardType[],
   regionType?: RegionType[],
-  effect: string,
+  effect: string | string[],
   developmentCost?: Resources,
   suit?: Suit, 
   nation?: Nation,
