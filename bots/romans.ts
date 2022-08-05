@@ -9,7 +9,7 @@ export const romansBarbarian: BotTable = [
   { if: Icon.PINNED, then: [E.GAIN_1_P, E.PUT_INTO_HISTORY] },
   { if: 'Advance', then: E.FIRST_OF(['If able, spend 5 {materials} to break through for {civilised}.', E.ACQUIRE_UNCIV, E.GAIN_1_P]) },
   { if: 'Prosperity', then: [E.DISCARD_1_CARD, E.GAIN_1_M_1_P_PER_REGION_IN_PLAY, E.YOU_MAY_DRAW_CARD] },
-  { if: State.BARBARIAN, then: E.FIRST_OF(['If able, spend 3 {population} to break through for {tributary}.', E.ACQUIRE_REGION, E.GAIN_1_P]) },
+  { if: State.BARBARIAN, then: E.FIRST_OF([E.SPEND_3_P_TO_BREAK_THROUGH_FOR_TRIBUTARY, E.ACQUIRE_REGION, E.GAIN_1_P]) },
   { if: Suit.TRIBUTARY, then: [E.DISCARD_2_CARDS, E.GAIN_1_PROGRESS, E.PUT_INTO_HISTORY] },
   { if: 'Other', then: E.GAIN_2_M },
 ];

@@ -6,7 +6,7 @@ import * as E from '../effects'
 export const carthaginiansBarbarian: BotTable = [
   { if: Suit.FAME, then: [E.GAIN_1_P_1_M, E.PUT_INTO_HISTORY] },
   { if: 'Glory', then: E.FIRST_OF([E.ABANDON_3_REGIONS_FOR_FAME, E.BREAK_THROUGH_FOR_REGION]) },
-  { if: State.BARBARIAN, then: 'If able, spend 3 {population} to break through for {tributary}. Otherwise, if able, spend 2 {materials} acquire {civilised} or {uncivilised}. Otherwise, gain 1 {materials} and 1 {population} and put this card into history.' },
+  { if: State.BARBARIAN, then: E.FIRST_OF([E.SPEND_3_P_TO_BREAK_THROUGH_FOR_TRIBUTARY, 'Spend 2 {materials} acquire {civilised} or {uncivilised}. Otherwise, gain 1 {materials} and 1 {population} and put this card into history.']) },
   { if: Suit.REGION, then: [E.DISCARD_1_CARD, E.PLAY_REGION, E.EXILE_FROM_MARKET] },
   { if: Icon.PINNED, then: [E.GAIN_1_P_2_M, E.PUT_INTO_HISTORY] },
   { if: 'Prosperity', then: [E.DISCARD_1_CARD, E.GAIN_1_M_1_P_PER_REGION_IN_PLAY, E.YOU_MAY_DRAW_CARD] },
