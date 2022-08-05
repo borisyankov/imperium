@@ -1,27 +1,28 @@
 import { BotTable, Icon, State, Suit } from "../types";
+import * as E from '../effects'
 
 export const romansBarbarian: BotTable = [
-  [Icon.ATTACK, 'You recall a {region}. You take {unrest}.'],
-  [Suit.FAME, 'Spend all {population} to gain the same number of {progress}. Put this card into history.' ],
-  ['Glory', 'If able, abandon 3 {region} to gain the top {fame} card. Otherwise, gain 1 {progress} and you recall a {region}.'],
-  [Suit.REGION, 'Discard the top card from the bot deck. Play this {region}. Exile a card from the market.'],
-  [Icon.PINNED, 'Gain 1 {population}. Put this card into history.'],
-  ['Advance', 'If able, spend 5 {materials} to break through for {civilised}. Otherwise, if able, acquire {uncivilised}. Otherwise, gain 1 {population}.'],
-  ['Prosperity', 'Discard the top card from the bot deck. Gain 1 {materials} and 1 {population} per {region} in play. You MAY draw a card.'],
-  [State.BARBARIAN, 'If able, spend 3 {population} to break through for {tributary}. Otherwise, if able, acquire {region}. Otherwise, gain 1 {population}.' ],
-  [Suit.TRIBUTARY, 'Discard the top 2 cards from the bot deck. Gain 1 {progress}. Put this card into history.'],
-  ['Other', 'Gain 2 {materials}.'],
+  { if: Icon.ATTACK, then: [E.YOU_RECALL_REGION, E.YOU_TAKE_UNREST] },
+  { if: Suit.FAME, then: [E.POPULATION_TO_PROGRESS, E.PUT_INTO_HISTORY] },
+  { if: 'Glory', then: E.FIRST_OF([E.ABANDON_3_REGIONS_FOR_FAME, [E.GAIN_1_PROGRESS, E.YOU_RECALL_REGION]]) },
+  { if: Suit.REGION, then: [E.DISCARD_1_CARD, E.PLAY_REGION, E.EXILE_FROM_MARKET] },
+  { if: Icon.PINNED, then: [E.GAIN_1_P, E.PUT_INTO_HISTORY] },
+  { if: 'Advance', then: E.FIRST_OF(['If able, spend 5 {materials} to break through for {civilised}.', E.ACQUIRE_UNCIV, E.GAIN_1_P]) },
+  { if: 'Prosperity', then: [E.DISCARD_1_CARD, E.GAIN_1_M_1_P_PER_REGION_IN_PLAY, E.YOU_MAY_DRAW_CARD] },
+  { if: State.BARBARIAN, then: E.FIRST_OF(['If able, spend 3 {population} to break through for {tributary}.', E.ACQUIRE_REGION, E.GAIN_1_P]) },
+  { if: Suit.TRIBUTARY, then: [E.DISCARD_2_CARDS, E.GAIN_1_PROGRESS, E.PUT_INTO_HISTORY] },
+  { if: 'Other', then: E.GAIN_2_M },
 ];
 
 export const romansEmpire: BotTable = [
-  [State.BARBARIAN, 'Put this card into history.'],
-  [Suit.FAME, 'Spend all {population} to gain the same number of {progress}. Put this card into history.'],
-  [Icon.ATTACK,  'You discard a card. You abandon a {region}.'],
-  ['Glory', 'If able, abandon 3 {region} to gain the top {fame} card. Otherwise, you discard 2 cards.'],
-  ['Prosperity', 'Gain 1 {materials} and 1 {population} per {region} in play. You MAY draw a card.'],
-  [Suit.REGION, 'Gain 1 {population}. Play this {region}. Exile a card from the market.'],
-  [Icon.PINNED, 'Discard the top card from the bot deck. Put this card into history.'],
-  [Suit.TRIBUTARY, 'Discard the top 2 cards from the bot deck. Put this card into history.'],
-  [State.EMPIRE, 'Break through for {civilised}. Put this card into history.'],
-  ['Other', 'If able, spend 3 {materials} to gain 1 {progress}. Gain 1 {population}. Put this card into history.'],
+  { if: State.BARBARIAN, then: E.PUT_INTO_HISTORY },
+  { if: Suit.FAME, then: [E.POPULATION_TO_PROGRESS, E.PUT_INTO_HISTORY] },
+  { if: Icon.ATTACK, then: [E.YOU_DISCARD_1_CARD, E.YOU_ABANDON_REGION] },
+  { if: 'Glory', then: E.FIRST_OF([E.ABANDON_3_REGIONS_FOR_FAME, E.YOU_DISCARD_2_CARDS]) },
+  { if: 'Prosperity', then: [E.GAIN_1_M_1_P_PER_REGION_IN_PLAY, E.YOU_MAY_DRAW_CARD] },
+  { if: Suit.REGION, then: [E.GAIN_1_P, E.PLAY_REGION, E.EXILE_FROM_MARKET] },
+  { if: Icon.PINNED, then: [E.DISCARD_1_CARD, E.PUT_INTO_HISTORY] },
+  { if: Suit.TRIBUTARY, then: [E.DISCARD_2_CARDS, E.PUT_INTO_HISTORY] },
+  { if: State.EMPIRE, then: [E.BREAK_THROUGH_FOR_CIV, E.PUT_INTO_HISTORY] },
+  { if: 'Other', then: ['If able, spend 3 {materials} to gain 1 {progress}.', E.GAIN_1_P, E.PUT_INTO_HISTORY] },
 ];

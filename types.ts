@@ -6,13 +6,16 @@ export enum Suit { POWER, REGION, UNCIVILISED, CIVILISED, UNCIVILISED_CIVILISED,
 export enum Nation { CARTHAGINIANS, CELTS, GREEKS, MACEDONIANS, PERSIANS, ROMANS, SCYTHIANS, VIKINGS, ARTHURIANS, ATLANTEANS, EGYPTIANS, MAURYANS, MINOANS, OLMECS, QIN, UTOPIAN }
 export enum StartingLocation {IN_PLAY, NATION, ACCESSION, DEVELOPMENT, SUPPLY }
 
+export type Effect = string | string[];
+
+
 export type Card = {
   cardName: string,
   icon?: Icon,
   state?: State,
   cardType?: CardType[],
   regionType?: RegionType[],
-  effect: string | string[],
+  effect: Effect,
   developmentCost?: Resources,
   suit?: Suit, 
   nation?: Nation,
@@ -25,7 +28,7 @@ export type Card = {
 export type Resources = { materials?: number, population?: number, progress?: number };
 
 export type BotCardIcon = string | Suit | State | Icon;
-export type BotRow = [BotCardIcon, string];
+export type BotRow = { if: BotCardIcon, then: Effect };
 export type BotTable = BotRow[];
 
 export type MarketBoard = {
