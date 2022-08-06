@@ -6,7 +6,7 @@ export enum Suit { POWER, REGION, UNCIVILISED, CIVILISED, UNCIVILISED_CIVILISED,
 export enum Nation { CARTHAGINIANS, CELTS, GREEKS, MACEDONIANS, PERSIANS, ROMANS, SCYTHIANS, VIKINGS, ARTHURIANS, ATLANTEANS, EGYPTIANS, MAURYANS, MINOANS, OLMECS, QIN, UTOPIAN }
 export enum StartingLocation {IN_PLAY, NATION, ACCESSION, DEVELOPMENT, SUPPLY }
 
-export type Effect = string | string[];
+export type Effect = string | string[] | Effect[];
 
 
 export type Card = {
