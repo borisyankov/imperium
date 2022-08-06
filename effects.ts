@@ -37,6 +37,7 @@ export const ACQUIRE_TRIBUTARY = 'Acquire {tributary}.';
 export const ACQUIRE_TRIBUTARY_OR_REGION = 'Acquire {tributary} or {region}.';
 export const ACQUIRE_REGION_FROM_EXILE = 'Acquire a {region} from exile.';
 export const ACQUIRE_UNCIV = 'Acquire {uncivilised}.';
+export const ACQUIRE_CIV = 'Acquire {civilised}.';
 export const ACQUIRE_CIV_OR_UNCIV = 'Acquire {civilised} or {uncivilised}.';
 
 // bot-specific
@@ -49,6 +50,10 @@ export const GAIN_FAME = 'Gain the top {fame} card.';
 export const ABANDON_3_REGIONS_FOR_FAME = 'Abandon 3 {region} to gain the top {fame} card.';
 export const ACQUIRE_ANY = 'Acquire {uncivilised} / {civilised} / {region} / {tributary}.';
 export const SPEND_1_P = 'Spend 1 {population}.';
+export const SPEND_2_P = 'Spend 2 {population}.';
+export const SPEND_3_P = 'Spend 3 {population}.';
+export const SPEND_1_M = 'Spend 1 {materials}.';
+export const SPEND_2_M = 'Spend 2 {materials}.';
 export const SPEND_3_M = 'Spend 3 {materials}.';
 export const SPEND_2_M_FOR_ANY = 'Spend 2 {materials} to acquire {uncivilised} / {civilised} / {region} / {tributary}.';
 export const SPEND_2_M_FOR_CIV_UNCIV = 'Spend 2 {materials} to acquire {civilised} / {uncivilised}.';
@@ -71,3 +76,5 @@ export const YOU_ABANDON_REGION = 'YOU abandon a {region}.';
 export const YOU_RECALL_REGION = 'YOU recall a {region}.';
 export const YOU_MAY_DRAW_CARD = 'YOU MAY draw a card.';
 export const YOU_GAIN_2_M = 'YOU gain 2 {materials}.';
+export const YOU_GAIN_1_P = 'YOU gain 1 {population}.';
+export const YOU_RECALL_PINNED = 'YOU recall a {pinned} card.';
