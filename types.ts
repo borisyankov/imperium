@@ -27,7 +27,7 @@ export type Card = {
 
 export type Resources = { materials?: number, population?: number, progress?: number };
 
-export type BotCardIcon = string | Suit | State | Icon;
+export type BotCardIcon = 'Conquer' | 'Advance' | 'Prosperity' | 'Glory' | 'Other' | Suit | State | Icon;
 export type BotRow = { if: BotCardIcon, then: Effect };
 export type BotTable = BotRow[];
 
