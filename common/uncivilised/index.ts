@@ -1,0 +1,24 @@
+import unc01 from './unc01';
+import unc02 from './unc02';
+import unc03 from './unc03';
+import unc04 from './unc04';
+import unc05 from './unc05';
+import unc06 from './unc06';
+import unc07 from './unc07';
+import unc08 from './unc08';
+import unc09 from './unc09';
+import unc10 from './unc10';
+import unc11 from './unc11';
+import unc12 from './unc12';
+import unc13 from './unc13';
+import unc14 from './unc14';
+import unc15 from './unc15';
+import unc16 from './unc16';
+import unc17 from './unc17';
+import unc18 from './unc18';
+import unc19 from './unc19';
+import unc20 from './unc20';
+import unc21 from './unc21';
+import unc22 from './unc22';
+
+export default [unc01, unc02, unc03, unc04, unc05, unc06, unc07, unc08, unc09, unc10, unc11, unc12, unc13, unc14, unc15, unc16, unc17, unc18, unc19, unc20, unc21, unc22];
