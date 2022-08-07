@@ -5,7 +5,7 @@ const plainsOfThessaly: Card = {
   cardName: 'Plains of Thessaly',
   icon: Icon.PINNED,
   regionType: [RegionType.PRODUCTION],
-  effect: [E.GAIN_1_M, E.GARRISON],
+  effect: [E.GAIN({ materials: 1 }), E.GARRISON],
   suit: Suit.REGION,
   nation: Nation.GREEKS,
   cardNumber: '1GRE12/23',

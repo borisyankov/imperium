@@ -4,11 +4,11 @@ import * as E from '../effects'
 export const persiansBarbarian: BotTable = [
   { if: Suit.FAME, then: [E.MATERIALS_TO_PROGRESS, E.PUT_INTO_HISTORY] },
   { if: 'Glory', then: E.FIRST_OF([E.ABANDON_3_REGIONS_FOR_FAME, E.BREAK_THROUGH_FOR_REGION]) },
-  { if: Suit.TRIBUTARY, then: [E.GAIN_2_M_2_P, E.DISCARD_1_CARD, E.PUT_INTO_HISTORY] },
-  { if: State.BARBARIAN, then: E.FIRST_OF([[E.SPEND_3_P_TO_BREAK_THROUGH_FOR_TRIBUTARY, E.PUT_INTO_HISTORY], E.SPEND_2_M_FOR_CIV_UNCIV, [E.GAIN_1_M_1_P_PER_REGION_IN_PLAY, E.PUT_ON_TOP_DECK]]) },
-  { if: Suit.REGION, then: [E.GAIN_1_P, E.PLAY_REGION, E.EXILE_FROM_MARKET] },
+  { if: Suit.TRIBUTARY, then: [E.GAIN({ materials: 2, population: 2 }), E.DISCARD(1), E.PUT_INTO_HISTORY] },
+  { if: State.BARBARIAN, then: E.FIRST_OF([[E.SPEND_3_P_TO_BREAK_THROUGH_FOR_TRIBUTARY, E.PUT_INTO_HISTORY], [E.SPEND({ materials: 2 }), E.ACQUIRE_CIV_OR_UNCIV], [E.GAIN_1_M_1_P_PER_REGION_IN_PLAY, E.PUT_ON_TOP_DECK]]) },
+  { if: Suit.REGION, then: [E.GAIN({ population: 1 }), E.PLAY_REGION, E.EXILE_FROM_MARKET] },
   { if: Icon.PINNED, then: [E.ACQUIRE_REGION, E.PUT_INTO_HISTORY] },
-  { if: 'Prosperity', then: [E.DISCARD_1_CARD, E.GAIN_1_M_1_P_PER_REGION_IN_PLAY, E.YOU_MAY_DRAW_CARD] },
+  { if: 'Prosperity', then: [E.DISCARD(1), E.GAIN_1_M_1_P_PER_REGION_IN_PLAY, E.YOU_MAY_DRAW_CARD] },
   { if: 'Other', then: E.FIRST_OF([E.ACQUIRE_TRIBUTARY, E.ACQUIRE_UNCIV, E.PUT_INTO_HISTORY]) },
 ];
 
@@ -16,10 +16,10 @@ export const persiansEmpire: BotTable = [
   { if: Suit.FAME, then: [E.SPEND_3_P_TO_GAIN_1_PROGRESS_MULTI, E.PUT_INTO_HISTORY] },
   { if: 'Glory', then: E.FIRST_OF([E.ABANDON_3_REGIONS_FOR_FAME, E.TOP_DYNASTY_CARD_INTO_DISCARD]) },
   { if: State.BARBARIAN, then: E.PUT_INTO_HISTORY },
-  { if: Suit.TRIBUTARY, then: [E.GAIN_2_PROGRESS, E.PUT_INTO_HISTORY] },
-  { if: Icon.ATTACK, then: [E.BREAK_THROUGH_FOR_TRIBUTARY, E.YOU_GAIN_2_M, E.YOU_TAKE_UNREST] },
+  { if: Suit.TRIBUTARY, then: [E.GAIN({ progress: 2 }), E.PUT_INTO_HISTORY] },
+  { if: Icon.ATTACK, then: [E.BREAK_THROUGH_FOR_TRIBUTARY, E.YOU_GAIN({ materials: 2 }), E.YOU_TAKE_UNREST] },
   { if: Suit.REGION, then: [E.PLAY_REGION, E.EXILE_FROM_MARKET] },
   { if: Icon.PINNED, then: E.PUT_INTO_HISTORY },
   { if: State.EMPIRE, then: [E.ACQUIRE_ANY, E.PUT_INTO_HISTORY] },
-  { if: 'Other', then: E.FIRST_OF([E.ACQUIRE_REGION, E.GAIN_1_PROGRESS]) },
+  { if: 'Other', then: E.FIRST_OF([E.ACQUIRE_REGION, E.GAIN({ progress: 1 })]) },
 ];

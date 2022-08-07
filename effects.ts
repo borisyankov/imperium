@@ -1,24 +1,19 @@
-import { Effect } from "./types";
+import { Effect, Resources } from "./types";
 
 export const FIRST_OF = (effect: Effect[]) => effect.join(' || ');
 
+export const GAIN = (resources: Resources) => 'Gain ' + JSON.stringify(resources);
+export const YOU_GAIN = (resources: Resources) => 'YOU gain ' + JSON.stringify(resources);
+export const SPEND = (resources: Resources) => 'Spend ' + JSON.stringify(resources);
+export const STEAL = (resources: Resources) => 'Steal ' + JSON.stringify(resources);
+export const DISCARD = (n: number) => `Discard the top ${n} cards from the bot deck.`;
+export const YOU_DISCARD = (n: number) => `YOU discard ${n} cards.`;
+
 export const GARRISON = 'You MAY garrison a card.';
 export const EXILE_FROM_MARKET = 'Exile a card from the market.';
-export const GAIN_1_P = 'Gain 1 {population}.';
-export const GAIN_1_M = 'Gain 1 {materials}.';
-export const GAIN_2_M = 'Gain 2 {materials}.';
-export const GAIN_3_M = 'Gain 3 {materials}.';
-export const GAIN_1_P_1_M = 'Gain 1 {materials} and 1 {population}.';
-export const GAIN_1_P_2_M = 'Gain 1 {population} and 2 {materials}.';
-export const GAIN_2_M_2_P = 'Gain 2 {materials} and 2 {population}.';
-export const GAIN_1_PROGRESS = 'Gain 1 {progress}.';
-export const GAIN_2_PROGRESS = 'Gain 2 {progress}.';
 export const GAIN_1_M_1_P_PER_REGION_IN_PLAY = 'Gain 1 {materials} and 1 {population} per {region} in play.';
 export const GAIN_1_PROGRESS_PER_REGION_IN_PLAY = 'Gain 1 {progress} per {region} in play.';
 export const SPEND_3_P_TO_GAIN_1_PROGRESS_MULTI = 'Spend 3 {population} to gain 1 {progress} as many times as possible.';
-export const STEAL_1_M = 'Steal 1 {materials}.';
-export const STEAL_2_M = 'Steal 2 {materials}.';
-export const STEAL_1_PROGRESS = 'Steal 1 {progress}.';
 export const DRAW = 'Draw a card.';
 export const MAY_DRAW = 'You MAY draw a card.';
 export const DISCARD_TO_HISTORY = 'You MAY put a card from your discard pile into your history.';
@@ -41,22 +36,10 @@ export const ACQUIRE_CIV = 'Acquire {civilised}.';
 export const ACQUIRE_CIV_OR_UNCIV = 'Acquire {civilised} or {uncivilised}.';
 
 // bot-specific
-export const DISCARD_1_CARD = 'Discard the top card from the bot deck.';
-export const DISCARD_2_CARDS = 'Discard the top 2 cards from the bot deck.';
-export const DISCARD_3_CARDS = 'Discard the top 3 cards from the bot deck.';
-export const DISCARD_4_CARDS = 'Discard the top 4 cards from the bot deck.';
 export const PLAY_REGION = 'Play this {region}.';
 export const GAIN_FAME = 'Gain the top {fame} card.';
 export const ABANDON_3_REGIONS_FOR_FAME = 'Abandon 3 {region} to gain the top {fame} card.';
 export const ACQUIRE_ANY = 'Acquire {uncivilised} / {civilised} / {region} / {tributary}.';
-export const SPEND_1_P = 'Spend 1 {population}.';
-export const SPEND_2_P = 'Spend 2 {population}.';
-export const SPEND_3_P = 'Spend 3 {population}.';
-export const SPEND_1_M = 'Spend 1 {materials}.';
-export const SPEND_2_M = 'Spend 2 {materials}.';
-export const SPEND_3_M = 'Spend 3 {materials}.';
-export const SPEND_2_M_FOR_ANY = 'Spend 2 {materials} to acquire {uncivilised} / {civilised} / {region} / {tributary}.';
-export const SPEND_2_M_FOR_CIV_UNCIV = 'Spend 2 {materials} to acquire {civilised} / {uncivilised}.';
 export const SPEND_3_P_TO_BREAK_THROUGH_FOR_TRIBUTARY = 'Spend 3 {population} to break through for {tributary}.';
 export const SPEND_4_P_TO_BREAK_THROUGH_FOR_TRIBUTARY = 'Spend 4 {population} to break through for {tributary}.';
 export const SPEND_4_M_TO_BREAK_THROUGH_FOR_CIVILISED = 'Spend 4 {materials} to break through for {civilised}.';
@@ -70,11 +53,8 @@ export const PUT_ON_TOP_DECK = 'Put this card on top of the bot deck.';
 // YOU
 export const OTHER_MAY_DRAW = 'You MAY draw a card.';
 export const YOU_TAKE_UNREST = 'YOU take {unrest}.';
-export const YOU_DISCARD_1_CARD = 'YOU discard a card.';
-export const YOU_DISCARD_2_CARDS = 'YOU discard 2 cards.';
+
 export const YOU_ABANDON_REGION = 'YOU abandon a {region}.';
 export const YOU_RECALL_REGION = 'YOU recall a {region}.';
 export const YOU_MAY_DRAW_CARD = 'YOU MAY draw a card.';
-export const YOU_GAIN_2_M = 'YOU gain 2 {materials}.';
-export const YOU_GAIN_1_P = 'YOU gain 1 {population}.';
 export const YOU_RECALL_PINNED = 'YOU recall a {pinned} card.';

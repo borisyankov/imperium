@@ -5,7 +5,7 @@ const haliacmonValley: Card = {
   cardName: 'Haliacmon Valley',
   icon: Icon.PINNED,
   regionType: [RegionType.FERTILE, RegionType.RIVER],
-  effect: [E.GAIN_1_P, E.GARRISON],
+  effect: [E.GAIN({ population: 1 }), E.GARRISON],
   suit: Suit.REGION,
   nation: Nation.MACEDONIANS,
   cardNumber: '1MAC18/23',

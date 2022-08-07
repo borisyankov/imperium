@@ -5,7 +5,7 @@ const pelagonia: Card = {
   cardName: 'Pelagonia',
   icon: Icon.PINNED,
   regionType: [RegionType.FERTILE],
-  effect: [E.GAIN_1_P, E.GARRISON],
+  effect: [E.GAIN({ population: 1 }), E.GARRISON],
   suit: Suit.REGION,
   nation: Nation.MACEDONIANS,
   cardNumber: '1MAC20/23',

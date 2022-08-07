@@ -5,7 +5,7 @@ const raetia: Card = {
   cardName: 'Raetia',
   icon: Icon.PINNED,
   regionType: [RegionType.PRODUCTION, RegionType.RIVER],
-  effect: [E.GAIN_1_M, E.GARRISON],
+  effect: [E.GAIN({ materials: 1 }), E.GARRISON],
   suit: Suit.REGION,
   nation: Nation.ROMANS,
   cardNumber: '1ROM12/23',

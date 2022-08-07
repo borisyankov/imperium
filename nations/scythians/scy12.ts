@@ -5,7 +5,7 @@ const caucasia: Card = {
   cardName: 'Caucasia',
   icon: Icon.PINNED,
   regionType: [RegionType.PRODUCTION],
-  effect: [E.GAIN_1_P, E.GARRISON],
+  effect: [E.GAIN({ population: 1 }), E.GARRISON],
   suit: Suit.REGION,
   nation: Nation.SCYTHIANS,
   cardNumber: '1SCY12/24',

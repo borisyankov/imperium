@@ -4,7 +4,7 @@ import * as E from '../../effects';
 const mountain: Card = {
   cardName: 'Mountain',
   icon: Icon.PINNED,
-  effect: [E.GAIN_3_M, E.EXILE_FROM_MARKET, E.GARRISON],
+  effect: [E.GAIN({ materials: 3 }), E.EXILE_FROM_MARKET, E.GARRISON],
   suit: Suit.REGION, 
   cardNumber: '1REG3/14',
   vp: 1,

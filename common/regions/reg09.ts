@@ -5,7 +5,7 @@ const marsh: Card = {
   cardName: 'Marsh',
   icon: Icon.PINNED,
   regionType: [RegionType.PRODUCTION, RegionType.RIVER],
-  effect: [E.GAIN_2_M, E.EXILE_FROM_MARKET, E.GARRISON],
+  effect: [E.GAIN({ materials: 2 }), E.EXILE_FROM_MARKET, E.GARRISON],
   suit: Suit.REGION, 
   cardNumber: '1REG9/14',
 }

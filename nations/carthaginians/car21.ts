@@ -5,7 +5,7 @@ const mauretania: Card = {
   cardName: 'Mauretania',
   icon: Icon.PINNED,
   regionType: [RegionType.PRODUCTION],
-  effect: [E.GAIN_2_M, E.GARRISON],
+  effect: [E.GAIN({ materials: 2 }), E.GARRISON],
   nation: Nation.CARTHAGINIANS,
   suit: Suit.REGION,
   cardNumber: '1CAR21/23',

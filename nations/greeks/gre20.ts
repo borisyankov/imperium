@@ -5,7 +5,7 @@ const peloponnese: Card = {
   cardName: 'Peloponnese',
   icon: Icon.PINNED,
   regionType: [RegionType.PRODUCTION, RegionType.RIVER],
-  effect: [E.GAIN_1_P, E.GARRISON],
+  effect: [E.GAIN({ population: 1 }), E.GARRISON],
   suit: Suit.REGION,
   nation: Nation.GREEKS,
   cardNumber: '1GRE20/23',

@@ -5,7 +5,7 @@ const ponticSteppe: Card = {
   cardName: 'Pontic Steppe',
   icon: Icon.PINNED,
   regionType: [RegionType.PRODUCTION, RegionType.FERTILE],
-  effect: [E.GAIN_1_P, E.GARRISON],
+  effect: [E.GAIN({ population: 1 }), E.GARRISON],
   suit: Suit.REGION,
   nation: Nation.SCYTHIANS,
   cardNumber: '1SCY10/24',
