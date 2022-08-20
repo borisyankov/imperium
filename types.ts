@@ -32,17 +32,32 @@ export type BotRow = { if: BotCardIcon, then: Effect };
 export type BotTable = BotRow[];
 
 export type MarketBoard = {
-  commonDeck: Card[],
-  commonRevealed1: Card[],
-  tokensOnCommon1: Resources;
-  commonRevealed2: Card[],
+  mainDeck: Card[],
+  mainRevealed1: Card[],
+  tokensOnMain1: Resources;
+  mainRevealed2: Card[],
+  tokensOnMain2: Resources;
   civilisedDeck: Card[],
   civilisedRevealed: Card[],
+  tokensOnCivilised: Resources;
   uncivilisedDeck: Card[],
   uncivilisedRevealed: Card[],
+  tokensOnUncivilised: Resources;
   regionDeck: Card[],
   regionRevealed: Card[],
+  tokensOnRegion: Resources;
   fameDeck: Card[],
   unrestPile: Card[],
   exiledDeck: Card[],
+}
+
+export type Player = {
+  nation: Nation;
+  state: State;
+  resources: Resources;
+}
+
+export type Game = {
+  marketBoard: MarketBoard;
+  players: Player[];
 }
