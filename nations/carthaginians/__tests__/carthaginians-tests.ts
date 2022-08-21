@@ -1,14 +1,14 @@
 import cards from '..';
 import { Icon, StartingLocation, State, Suit } from '../../../types';
 
-describe('Persians', () => {
-  test('there are 23 Persians cards', () => {
+describe('Carthaginians', () => {
+  test('there are 23 Carthaginians cards', () => {
     expect(cards.length).toEqual(23);
   });
 
-  test('there are 15 cards with no icon', () => {
+  test('there are 14 cards with no icon', () => {
     const cardsWithNoIcon = cards.filter(card => card.icon === undefined);
-    expect(cardsWithNoIcon.length).toEqual(15);
+    expect(cardsWithNoIcon.length).toEqual(14);
   });
 
   test('there are 6 cards with Pinned icon', () => {
@@ -16,34 +16,34 @@ describe('Persians', () => {
     expect(cardsWithPinnedIcon.length).toEqual(6);
   });
 
-  test('there are 2 cards with Attack icon', () => {
+  test('there are 3 cards with Attack icon', () => {
     const cardsWithAttackIcon = cards.filter(card => card.icon === Icon.ATTACK);
-    expect(cardsWithAttackIcon.length).toEqual(2);
+    expect(cardsWithAttackIcon.length).toEqual(3);
   });
 
-  test('there are 4 cards with Region suit', () => {
+  test('there are 3 cards with Region suit', () => {
     const cardsWithRegionSuit = cards.filter(card => card.suit === Suit.REGION);
-    expect(cardsWithRegionSuit.length).toEqual(4);
-  });
-
-  test('there is are 3 cards with Tributary suit', () => {
-    const cardsWithRegionSuit = cards.filter(card => card.suit === Suit.TRIBUTARY);
     expect(cardsWithRegionSuit.length).toEqual(3);
   });
 
-  test('there are 12 cards with no suit', () => {
+  test('there is one card with Tributary suit', () => {
+    const cardsWithRegionSuit = cards.filter(card => card.suit === Suit.TRIBUTARY);
+    expect(cardsWithRegionSuit.length).toEqual(1);
+  });
+
+  test('there are 16 cards with no suit', () => {
     const cardsWithNoSuit = cards.filter(card => card.suit === undefined);
-    expect(cardsWithNoSuit.length).toEqual(12);
+    expect(cardsWithNoSuit.length).toEqual(16);
   });
 
-  test('there are 3 cards with Unrest suit', () => {
+  test('there are 2 cards with Unrest suit', () => {
     const cardsWithUnrestSuit = cards.filter(card => card.suit === Suit.UNREST);
-    expect(cardsWithUnrestSuit.length).toEqual(3);
+    expect(cardsWithUnrestSuit.length).toEqual(2);
   });
 
-  test('there are 11 cards with no state', () => {
+  test('there are 12 cards with no state', () => {
     const cardsWithNoState = cards.filter(card => card.state === undefined);
-    expect(cardsWithNoState.length).toEqual(11);
+    expect(cardsWithNoState.length).toEqual(12);
   });
 
   test('there are 5 cards with Barbarian state', () => {
@@ -51,9 +51,9 @@ describe('Persians', () => {
     expect(cardsWithBarbarianState.length).toEqual(5);
   });
 
-  test('there are 7 cards with Empire state', () => {
+  test('there are 6 cards with Empire state', () => {
     const cardsWithEmpireState = cards.filter(card => card.state === State.EMPIRE);
-    expect(cardsWithEmpireState.length).toEqual(7);
+    expect(cardsWithEmpireState.length).toEqual(6);
   });
 
   test('there are 10 cards in player deck', () => {
@@ -61,14 +61,14 @@ describe('Persians', () => {
     expect(cardsWithEmpireState.length).toEqual(10);
   });
 
-  test('there are 4 cards in Nation deck', () => {
+  test('there are 5 cards in Nation deck', () => {
     const cardsWithEmpireState = cards.filter(card => card.startingLocation === StartingLocation.NATION);
-    expect(cardsWithEmpireState.length).toEqual(4);
+    expect(cardsWithEmpireState.length).toEqual(5);
   });
 
-  test('there are 7 cards in Development deck', () => {
+  test('there are 6 cards in Development deck', () => {
     const cardsWithEmpireState = cards.filter(card => card.startingLocation === StartingLocation.DEVELOPMENT);
-    expect(cardsWithEmpireState.length).toEqual(7);
+    expect(cardsWithEmpireState.length).toEqual(6);
   });
 
   test('there in one Accession card', () => {
