@@ -1,5 +1,5 @@
 import { Card, Nation} from '../../types';
-import conquerBase from '../advance';
+import conquerBase from '../conquer';
 
 const conquer: Card = {
   ...conquerBase,
