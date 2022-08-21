@@ -1,4 +1,4 @@
-import { Card, Nation, Suit, State, StartingLocation } from '../../types';
+import { Card, Nation, Suit, State } from '../../types';
 
 const lydians: Card = {
   cardName: 'Lydians',
@@ -6,7 +6,6 @@ const lydians: Card = {
   effect: 'Gain 2 {population}. Put this card into your history.',
   nation: Nation.PERSIANS,
   cardNumber: '1PER1/23',
-  startingLocation: StartingLocation.IN_PLAY,
   suit: Suit.TRIBUTARY,
 };
 

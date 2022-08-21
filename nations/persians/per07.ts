@@ -2,7 +2,7 @@ import { Card, State, Nation, StartingLocation, Icon } from '../../types';
 
 const persianGold: Card = {
   cardName: 'Persian Gold',
-  icon: Icon.PINNED,
+  icon: Icon.ATTACK,
   state: State.EMPIRE,
   effect: 'All players gain 2 {materials}. You gain 1 {progress}. Each other player takes 1 {unrest}.',
   nation: Nation.PERSIANS,
